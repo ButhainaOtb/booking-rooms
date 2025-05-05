@@ -1,0 +1,21 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "moduleDirectories" : ["node_modules", "<rootDir>"],
+  "rootDir": "..",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "maxWorkers" : 6,
+  "verbose" : true,
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coverageDirectory" : "./test/coverage",
+  "collectCoverageFrom" : ["src/**/*ts", "!src/**database/migrations/**/*ts", "!src/**database/factories/**/*ts", "!src/**database/seeds/**/*ts"],
+  "coverageReporters" : ["json"],
+  "testTimeout": 90000,
+  "globals" : {
+    "ts-jest" : {
+      "isolatedModules" : true
+    }
+  }
+}
